@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FirebaseCRUD</string>
+    <string name="nome">Digite seu Nome:</string>
+    <string name="endereco">Digite seu Endereço:</string>
+    <string name="bairro">Digite seu Bairro:</string>
+    <string name="cep">Digite seu CEP:</string>
+    <string name="edtNome">Nome</string>
+    <string name="edtEndereco">Endereço</string>
+    <string name="edtBairro">Bairro</string>
+    <string name="edtCEP">CEP</string>
+    <string name="btnCadastrar">Cadastrar</string>
+</resources>
