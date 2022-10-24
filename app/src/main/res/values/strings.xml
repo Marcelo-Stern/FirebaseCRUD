@@ -9,4 +9,7 @@
     <string name="edtBairro">Bairro</string>
     <string name="edtCEP">CEP</string>
     <string name="btnCadastrar">Cadastrar</string>
+    <string name="btnConsultar">Consultar</string>
+    <string name="btnEditar">Editar</string>
+    <string name="btnExcluir">Excluir</string>
 </resources>

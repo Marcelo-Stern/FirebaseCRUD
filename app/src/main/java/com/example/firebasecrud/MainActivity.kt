@@ -1,6 +1,7 @@
 package com.example.firebasecrud
 
 import android.content.ContentValues.TAG
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         val edtBairro : EditText = findViewById(R.id.edtBairro)
         val edtCEP : EditText = findViewById(R.id.edtCEP)
         val btnCadastrar : Button = findViewById(R.id.btnCadastrar)
+        val btnConsultar : Button = findViewById(R.id.btnConsultar)
 
         // Access a Cloud Firestore instance from your activity
         val db = Firebase.firestore
@@ -37,10 +39,17 @@ class MainActivity : AppCompatActivity() {
                 .add(cadastroPessoa)
                 .addOnSuccessListener { documentReference ->
                     Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+                    val intent = Intent(this, ReadActivity::class.java)
+                    startActivity(intent)
                 }
                 .addOnFailureListener{ e ->
                     Log.w(TAG, "Error adding document", e)
                 }
+        }
+
+        btnConsultar.setOnClickListener{
+            val intent = Intent(this, ReadActivity::class.java)
+            startActivity(intent)
         }
     }
 }
